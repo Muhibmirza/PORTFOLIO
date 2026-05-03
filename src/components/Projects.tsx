@@ -28,17 +28,17 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="min-h-screen py-32 px-10 md:px-24 bg-[#121212] relative z-20">
+    <section className="min-h-screen py-24 px-6 md:px-24 bg-[#121212] relative z-20">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="mb-20"
+        className="mb-12 md:mb-20"
       >
-        <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tighter mb-4">
+        <h2 className="text-4xl md:text-7xl font-bold text-white tracking-tighter mb-4">
           SELECTED WORKS
         </h2>
-        <div className="w-24 h-1 bg-white" />
+        <div className="w-16 md:w-24 h-1 bg-white" />
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

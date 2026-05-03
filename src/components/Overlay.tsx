@@ -22,28 +22,28 @@ export default function Overlay() {
       {/* Section 1 */}
       <motion.section
         style={{ opacity: opacity1, y: y1 }}
-        className="h-screen w-full flex flex-col items-center justify-center sticky top-0"
+        className="h-screen w-full flex flex-col items-center justify-center sticky top-0 px-6"
       >
-        <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-white text-center">
+        <h1 className="text-5xl md:text-8xl font-bold tracking-tighter text-white text-center leading-[0.9]">
           MUHIB MIRZA
         </h1>
-        <p className="text-xl md:text-2xl font-light text-white/60 mt-4 tracking-widest">
-          SOFTWARE DEVELOPER | IT MANAGER
+        <p className="text-sm md:text-2xl font-light text-white/60 mt-6 tracking-[0.3em] uppercase text-center">
+          Software Developer | IT Manager
         </p>
       </motion.section>
 
       {/* Section 2 */}
       <motion.section
         style={{ opacity: opacity2, y: y2 }}
-        className="h-screen w-full flex items-center justify-start px-10 md:px-24 sticky top-0"
+        className="h-screen w-full flex items-center justify-start px-8 md:px-24 sticky top-0"
       >
-        <div className="max-w-2xl">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Digital Architecture.
+        <div className="max-w-xl">
+          <h2 className="text-3xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
+            Digital <br className="md:hidden" /> Architecture.
           </h2>
-          <p className="text-lg md:text-xl text-white/70 leading-relaxed font-light">
+          <p className="text-base md:text-xl text-white/70 leading-relaxed font-light">
             I build scalable digital experiences and manage complex IT infrastructures. 
-            Bridging the gap between robust engineering and seamless performance.
+            Bridging design and engineering with extreme performance.
           </p>
         </div>
       </motion.section>
@@ -51,15 +51,15 @@ export default function Overlay() {
       {/* Section 3 */}
       <motion.section
         style={{ opacity: opacity3, y: y3 }}
-        className="h-screen w-full flex items-center justify-end px-10 md:px-24 sticky top-0"
+        className="h-screen w-full flex items-center justify-end px-8 md:px-24 sticky top-0"
       >
-        <div className="max-w-2xl text-right">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Engineering the Future.
+        <div className="max-w-xl text-right">
+          <h2 className="text-3xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
+            Engineering <br className="md:hidden" /> the Future.
           </h2>
-          <p className="text-lg md:text-xl text-white/70 leading-relaxed font-light">
-            From Next.js applications to enterprise-level network security.
-            Focusing on performance, security, and elegant system design.
+          <p className="text-base md:text-xl text-white/70 leading-relaxed font-light">
+            From modern web apps to enterprise-level network security.
+            Focusing on stability, security, and elegant system design.
           </p>
         </div>
       </motion.section>

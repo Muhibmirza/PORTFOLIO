@@ -22,25 +22,27 @@ export default function ScrollyCanvas() {
     const preloadImages = async () => {
       const loadedImages: HTMLImageElement[] = [];
       let loadedCount = 0;
+      const START_THRESHOLD = 20; // Start experience after 20 frames
 
       for (let i = 0; i < TOTAL_FRAMES; i++) {
         const img = new Image();
         const frameNumber = i.toString().padStart(3, "0");
-        // Using the exact filename format from list_dir
         img.src = `/sequence/frame_${frameNumber}_delay-0.066s.png`;
+        
         img.onload = () => {
           loadedCount++;
-          if (loadedCount === TOTAL_FRAMES) {
+          if (loadedCount >= START_THRESHOLD && isLoading) {
             setIsLoading(false);
           }
         };
+        
         loadedImages.push(img);
       }
       setImages(loadedImages);
     };
 
     preloadImages();
-  }, []);
+  }, [isLoading]);
 
   useEffect(() => {
     const render = () => {

@@ -15,12 +15,12 @@ export default function Home() {
       <Projects />
 
       {/* Experience & Skills Section */}
-      <section className="py-32 px-10 md:px-24 border-t border-white/5">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+      <section className="py-24 px-6 md:px-24 border-t border-white/5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-20">
           {/* Experience */}
           <div>
-            <h2 className="text-4xl font-bold text-white mb-12 tracking-tighter uppercase">Professional Journey</h2>
-            <div className="space-y-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-10 tracking-tighter uppercase">Professional Journey</h2>
+            <div className="space-y-10 md:space-y-12">
               <ExperienceItem 
                 company="Amna Ashraf Apparels"
                 role="Web Developer & IT Manager"
@@ -44,8 +44,8 @@ export default function Home() {
 
           {/* Skills */}
           <div>
-            <h2 className="text-4xl font-bold text-white mb-12 tracking-tighter uppercase">Core Expertise</h2>
-            <div className="grid grid-cols-2 gap-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-10 tracking-tighter uppercase">Core Expertise</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-4">
               <SkillCard title="Development" skills={["React.js", "Next.js", "Node.js", "PHP", "MySQL", "MongoDB"]} />
               <SkillCard title="IT & Networking" skills={["Infrastructure Design", "Cybersecurity", "Kerio Control", "SysAdmin"]} />
             </div>
