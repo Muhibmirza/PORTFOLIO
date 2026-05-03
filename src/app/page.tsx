@@ -1,6 +1,7 @@
 import ScrollyCanvas from "@/components/ScrollyCanvas";
 import Overlay from "@/components/Overlay";
 import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -52,6 +53,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Contact Section */}
+      <Contact />
 
       {/* Footer */}
       <footer className="py-20 px-10 md:px-24 border-t border-white/5 text-center">
