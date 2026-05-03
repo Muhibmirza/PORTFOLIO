@@ -1,10 +1,8 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 
 export default function Overlay() {
-  const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll();
 
   // Section 1: Intro (0-20%)

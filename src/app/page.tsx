@@ -1,7 +1,6 @@
 import ScrollyCanvas from "@/components/ScrollyCanvas";
 import Overlay from "@/components/Overlay";
 import Projects from "@/components/Projects";
-import { motion } from "framer-motion";
 
 export default function Home() {
   return (
