@@ -33,7 +33,7 @@ export default function Contact() {
       } else {
         setError(true);
       }
-    } catch (err) {
+    } catch (_err) {
       setError(true);
     } finally {
       setIsSubmitting(false);
@@ -52,7 +52,7 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tighter uppercase">
-              Let's Create <br /> <span className="text-white/40">Something Great</span>
+              Let&apos;s Create <br /> <span className="text-white/40">Something Great</span>
             </h2>
             <p className="text-white/60 text-lg font-light leading-relaxed mb-8 max-w-md">
               Whether you have a question about my work, a project proposal, or just want to say hi, my inbox is always open.
@@ -95,7 +95,7 @@ export default function Contact() {
                   <CheckCircle className="text-green-500" size={40} />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                <p className="text-white/60 mb-8">Thank you for reaching out. I'll get back to you as soon as possible.</p>
+                <p className="text-white/60 mb-8">Thank you for reaching out. I&apos;ll get back to you as soon as possible.</p>
                 <button 
                   onClick={() => setSubmitted(false)}
                   className="px-8 py-3 bg-white text-black font-bold rounded-lg hover:bg-white/90 transition-colors"
