@@ -60,7 +60,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-20 px-10 md:px-24 border-t border-white/5 text-center">
         <p className="text-white/20 text-sm tracking-[0.2em] uppercase">
-          &copy; 2026 Muhib Mirza — Crafted with Next.js & Framer Motion
+          &copy; 2026 Muhib Mirza Full Stack Developer & IT Expert
         </p>
       </footer>
     </main>
