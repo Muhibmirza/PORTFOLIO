@@ -15,25 +15,27 @@ export default function Contact() {
     setError(false);
 
     const formData = new FormData(e.currentTarget);
-    // Use environment variable for Web3Forms Access Key
-    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "YOUR_ACCESS_KEY_HERE";
-    formData.append("access_key", accessKey); 
+    const formValues = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("https://formsubmit.co/ajax/muhibmirza58@gmail.com", {
         method: "POST",
-        body: formData,
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formValues),
       });
 
       const data = await response.json();
 
-      if (data.success) {
+      if (data.success === "true" || response.ok) {
         setSubmitted(true);
         e.currentTarget.reset();
       } else {
         setError(true);
       }
-    } catch (_err) {
+    } catch {
       setError(true);
     } finally {
       setIsSubmitting(false);

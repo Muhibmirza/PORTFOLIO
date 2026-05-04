@@ -47,8 +47,8 @@ export default function Home() {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-10 tracking-tighter uppercase">Core Expertise</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-4">
-              <SkillCard title="Development" skills={["React.js", "Next.js", "Node.js", "PHP", "MySQL", "MongoDB"]} />
-              <SkillCard title="IT & Networking" skills={["Infrastructure Design", "Cybersecurity", "Kerio Control", "SysAdmin"]} />
+              <SkillCard title="Development" skills={["React.js", "Next.js", "TypeScript", "Node.js", "Express", "PHP", "Laravel", "MySQL", "PostgreSQL", "MongoDB", "Tailwind CSS", "Framer Motion"]} />
+              <SkillCard title="IT & Networking" skills={["Infrastructure Design", "Cybersecurity", "Kerio Control", "SysAdmin", "Network Security", "Active Directory", "Hardware Troubleshooting", "VPN Config", "Firewall Management"]} />
             </div>
           </div>
         </div>

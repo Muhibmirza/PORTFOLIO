@@ -53,9 +53,19 @@ export default function ScrollyCanvas() {
       if (!context) return;
 
       const index = Math.floor(frameIndex.get());
-      const img = images[index];
+      let img = images[index];
 
-      if (img) {
+      // Fallback: If current frame isn't loaded, find the closest previous loaded frame
+      if (img && (!img.complete || img.naturalWidth === 0)) {
+        for (let i = index - 1; i >= 0; i--) {
+          if (images[i] && images[i].complete && images[i].naturalWidth > 0) {
+            img = images[i];
+            break;
+          }
+        }
+      }
+
+      if (img && img.complete && img.naturalWidth > 0) {
         // Handle object-fit: cover logic manually in canvas
         const canvasWidth = canvas.width;
         const canvasHeight = canvas.height;
