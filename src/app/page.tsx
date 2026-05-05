@@ -2,6 +2,9 @@ import ScrollyCanvas from "@/components/ScrollyCanvas";
 import Overlay from "@/components/Overlay";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
+import About from "@/components/About";
+import Services from "@/components/Services";
+import SkillSlider from "@/components/SkillSlider";
 
 export default function Home() {
   return (
@@ -12,16 +15,25 @@ export default function Home() {
         <Overlay />
       </div>
 
+      {/* About Section */}
+      <About />
+
       {/* Projects Section */}
       <Projects />
 
-      {/* Experience & Skills Section */}
+      {/* Technical Expertise Section */}
+      <Services />
+
+      {/* Animated Skills Slider */}
+      <SkillSlider />
+
+      {/* Experience Section */}
       <section className="py-24 px-6 md:px-24 border-t border-white/5">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-20">
+        <div className="max-w-4xl mx-auto">
           {/* Experience */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-10 tracking-tighter uppercase">Professional Journey</h2>
-            <div className="space-y-10 md:space-y-12">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-16 tracking-tighter uppercase text-center">Professional <span className="text-white/40">Journey</span></h2>
+            <div className="space-y-12">
               <ExperienceItem 
                 company="Amna Ashraf Apparels"
                 role="Web Developer & IT Manager"
@@ -40,15 +52,6 @@ export default function Home() {
                 period="2021 – 2023"
                 description="Contributed to full-stack web applications and assisted in IT management and system implementation."
               />
-            </div>
-          </div>
-
-          {/* Skills */}
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-10 tracking-tighter uppercase">Core Expertise</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-4">
-              <SkillCard title="Development" skills={["React.js", "Next.js", "TypeScript", "Node.js", "Express", "PHP", "Laravel", "MySQL", "PostgreSQL", "MongoDB", "Tailwind CSS", "Framer Motion"]} />
-              <SkillCard title="IT & Networking" skills={["Infrastructure Design", "Cybersecurity", "Kerio Control", "SysAdmin", "Network Security", "Active Directory", "Hardware Troubleshooting", "VPN Config", "Firewall Management"]} />
             </div>
           </div>
         </div>
@@ -79,17 +82,3 @@ function ExperienceItem({ company, role, period, description }: { company: strin
   );
 }
 
-function SkillCard({ title, skills }: { title: string; skills: string[] }) {
-  return (
-    <div className="glass p-6 rounded-xl">
-      <h3 className="text-white/40 text-xs font-mono uppercase tracking-[0.2em] mb-4">{title}</h3>
-      <div className="flex flex-wrap gap-2">
-        {skills.map((skill) => (
-          <span key={skill} className="text-white text-sm font-light px-3 py-1 bg-white/5 rounded-md border border-white/5">
-            {skill}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
