@@ -90,17 +90,17 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="min-h-screen py-24 px-6 md:px-24 bg-[#121212] relative z-20">
+    <section className="min-h-screen py-24 px-6 md:px-24 bg-background relative z-20 transition-colors duration-300">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="mb-12 md:mb-20"
       >
-        <h2 className="text-4xl md:text-7xl font-bold text-white tracking-tighter mb-4">
+        <h2 className="text-4xl md:text-7xl font-bold tracking-tighter mb-4">
           SELECTED WORKS
         </h2>
-        <div className="w-16 md:w-24 h-1 bg-white" />
+        <div className="w-16 md:w-24 h-1 bg-foreground" />
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -115,7 +115,7 @@ export default function Projects() {
           >
             <div>
               <div className="flex justify-between items-start mb-6">
-                <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-white/80 transition-colors">
+                <h3 className="text-2xl md:text-3xl font-bold group-hover:text-foreground/80 transition-colors">
                   {project.title}
                 </h3>
 
@@ -124,21 +124,21 @@ export default function Projects() {
                   {project.type === "live" ? (
                     <>
                       <a href={project.link} target="_blank" rel="noopener noreferrer">
-                        <Globe className="text-white/40 hover:text-white cursor-pointer transition-colors" size={20} />
+                        <Globe className="text-foreground/40 hover:text-foreground cursor-pointer transition-colors" size={20} />
                       </a>
                       <a href={project.link} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="text-white/40 hover:text-white cursor-pointer transition-colors" size={20} />
+                        <ExternalLink className="text-foreground/40 hover:text-foreground cursor-pointer transition-colors" size={20} />
                       </a>
                     </>
                   ) : (
                     <a href={project.link} target="_blank" rel="noopener noreferrer">
-                      <Github className="text-white/40 hover:text-white cursor-pointer transition-colors" size={20} />
+                      <Github className="text-foreground/40 hover:text-foreground cursor-pointer transition-colors" size={20} />
                     </a>
                   )}
                 </div>
               </div>
 
-              <p className="text-white/60 text-lg mb-8 font-light">
+              <p className="text-foreground/60 text-lg mb-8 font-light">
                 {project.description}
               </p>
             </div>
@@ -147,7 +147,7 @@ export default function Projects() {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-4 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-white/40 uppercase tracking-widest"
+                  className="px-4 py-1 rounded-full bg-foreground/5 border border-foreground/10 text-xs text-foreground/40 uppercase tracking-widest"
                 >
                   {tag}
                 </span>

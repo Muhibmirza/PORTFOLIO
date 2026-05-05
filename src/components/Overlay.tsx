@@ -24,10 +24,10 @@ export default function Overlay() {
         style={{ opacity: opacity1, y: y1 }}
         className="h-screen w-full flex flex-col items-center justify-center sticky top-0 px-6"
       >
-        <h1 className="text-5xl md:text-8xl font-bold tracking-tighter text-white text-center leading-[0.9]">
+        <h1 className="text-5xl md:text-8xl font-bold tracking-tighter text-foreground text-center leading-[0.9]">
           MUHIB MIRZA
         </h1>
-        <p className="text-sm md:text-2xl font-light text-white/60 mt-6 tracking-[0.3em] uppercase text-center">
+        <p className="text-sm md:text-2xl font-light text-foreground/60 mt-6 tracking-[0.3em] uppercase text-center">
           Software Developer | IT Manager
         </p>
       </motion.section>
@@ -37,11 +37,11 @@ export default function Overlay() {
         style={{ opacity: opacity2, y: y2 }}
         className="h-screen w-full flex items-center justify-start px-8 md:px-24 sticky top-0"
       >
-        <div className="max-w-xl">
-          <h2 className="text-3xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
+        <div className="max-w-xl bg-background/10 backdrop-blur-sm p-6 rounded-2xl">
+          <h2 className="text-3xl md:text-6xl font-bold text-foreground mb-6 tracking-tight leading-tight">
             Digital <br className="md:hidden" /> Architecture.
           </h2>
-          <p className="text-base md:text-xl text-white/70 leading-relaxed font-light">
+          <p className="text-base md:text-xl text-foreground/70 leading-relaxed font-light">
             I build scalable digital experiences and manage complex IT infrastructures. 
             Bridging design and engineering with extreme performance.
           </p>
@@ -53,11 +53,11 @@ export default function Overlay() {
         style={{ opacity: opacity3, y: y3 }}
         className="h-screen w-full flex items-center justify-end px-8 md:px-24 sticky top-0"
       >
-        <div className="max-w-xl text-right">
-          <h2 className="text-3xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
+        <div className="max-w-xl text-right bg-background/10 backdrop-blur-sm p-6 rounded-2xl">
+          <h2 className="text-3xl md:text-6xl font-bold text-foreground mb-6 tracking-tight leading-tight">
             Engineering <br className="md:hidden" /> the Future.
           </h2>
-          <p className="text-base md:text-xl text-white/70 leading-relaxed font-light">
+          <p className="text-base md:text-xl text-foreground/70 leading-relaxed font-light">
             From modern web apps to enterprise-level network security.
             Focusing on stability, security, and elegant system design.
           </p>

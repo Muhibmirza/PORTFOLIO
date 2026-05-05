@@ -117,10 +117,10 @@ export default function ScrollyCanvas() {
 
   return (
     <div ref={containerRef} className="h-[500vh] w-full relative">
-      <div className="sticky top-0 h-screen w-full overflow-hidden bg-[#121212]">
+      <div className="sticky top-0 h-screen w-full overflow-hidden bg-background transition-colors duration-300">
         {isLoading && (
-          <div className="absolute inset-0 flex items-center justify-center z-50 bg-[#121212]">
-            <div className="text-white text-xl font-light tracking-widest animate-pulse">
+          <div className="absolute inset-0 flex items-center justify-center z-50 bg-background">
+            <div className="text-foreground text-xl font-light tracking-widest animate-pulse">
               LOADING EXPERIENCE...
             </div>
           </div>

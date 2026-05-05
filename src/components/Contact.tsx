@@ -43,7 +43,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-24 px-6 md:px-24 border-t border-white/5 bg-[#0a0a0a]" id="contact">
+    <section className="py-24 px-6 md:px-24 border-t border-foreground/5 bg-background transition-colors duration-300" id="contact">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
@@ -53,31 +53,31 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tighter uppercase">
-              Let&apos;s Create <br /> <span className="text-white/40">Something Great</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tighter uppercase">
+              Let&apos;s Create <br /> <span className="text-foreground/40">Something Great</span>
             </h2>
-            <p className="text-white/60 text-lg font-light leading-relaxed mb-8 max-w-md">
+            <p className="text-foreground/60 text-lg font-light leading-relaxed mb-8 max-w-md">
               Whether you have a question about my work, a project proposal, or just want to say hi, my inbox is always open.
             </p>
 
             <div className="space-y-6">
-              <div className="flex items-center gap-4 text-white/40 group cursor-pointer hover:text-white transition-colors">
-                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center border border-white/5 group-hover:border-white/20 transition-all">
+              <div className="flex items-center gap-4 text-foreground/40 group cursor-pointer hover:text-foreground transition-colors">
+                <div className="w-12 h-12 rounded-full bg-foreground/5 flex items-center justify-center border border-foreground/5 group-hover:border-foreground/20 transition-all">
                   <Mail size={20} />
                 </div>
                 <div>
                   <p className="text-xs font-mono uppercase tracking-widest">Email Me</p>
-                  <p className="text-white font-medium">muhibmirza58@gmail.com</p>
+                  <p className="text-foreground font-medium">muhibmirza58@gmail.com</p>
                 </div>
               </div>
               
-              <div className="flex items-center gap-4 text-white/40 group cursor-pointer hover:text-white transition-colors">
-                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center border border-white/5 group-hover:border-white/20 transition-all">
+              <div className="flex items-center gap-4 text-foreground/40 group cursor-pointer hover:text-foreground transition-colors">
+                <div className="w-12 h-12 rounded-full bg-foreground/5 flex items-center justify-center border border-foreground/5 group-hover:border-foreground/20 transition-all">
                   <User size={20} />
                 </div>
                 <div>
                   <p className="text-xs font-mono uppercase tracking-widest">Based In</p>
-                  <p className="text-white font-medium">Pakistan</p>
+                  <p className="text-foreground font-medium">Pakistan</p>
                 </div>
               </div>
             </div>
@@ -96,11 +96,11 @@ export default function Contact() {
                 <div className="w-20 h-20 bg-green-500/20 border border-green-500/50 rounded-full flex items-center justify-center mx-auto mb-6">
                   <CheckCircle className="text-green-500" size={40} />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                <p className="text-white/60 mb-8">Thank you for reaching out. I&apos;ll get back to you as soon as possible.</p>
+                <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
+                <p className="text-foreground/60 mb-8">Thank you for reaching out. I&apos;ll get back to you as soon as possible.</p>
                 <button 
                   onClick={() => setSubmitted(false)}
-                  className="px-8 py-3 bg-white text-black font-bold rounded-lg hover:bg-white/90 transition-colors"
+                  className="px-8 py-3 bg-foreground text-background font-bold rounded-lg hover:opacity-90 transition-colors"
                 >
                   Send Another
                 </button>
@@ -112,43 +112,43 @@ export default function Contact() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-xs font-mono uppercase tracking-widest text-white/40 ml-1">Full Name</label>
+                    <label className="text-xs font-mono uppercase tracking-widest text-foreground/40 ml-1">Full Name</label>
                     <div className="relative">
-                      <User className="absolute left-4 top-1/2 -translate-y-1/2 text-white/20" size={18} />
+                      <User className="absolute left-4 top-1/2 -translate-y-1/2 text-foreground/20" size={18} />
                       <input 
                         type="text" 
                         name="name" 
                         required
                         placeholder="John Doe"
-                        className="w-full bg-white/5 border border-white/10 rounded-xl py-3.5 pl-12 pr-4 text-white focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all"
+                        className="w-full bg-foreground/5 border border-foreground/10 rounded-xl py-3.5 pl-12 pr-4 text-foreground focus:outline-none focus:border-foreground/30 focus:bg-foreground/10 transition-all placeholder:text-foreground/20"
                       />
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-mono uppercase tracking-widest text-white/40 ml-1">Email Address</label>
+                    <label className="text-xs font-mono uppercase tracking-widest text-foreground/40 ml-1">Email Address</label>
                     <div className="relative">
-                      <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-white/20" size={18} />
+                      <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-foreground/20" size={18} />
                       <input 
                         type="email" 
                         name="email" 
                         required
                         placeholder="john@example.com"
-                        className="w-full bg-white/5 border border-white/10 rounded-xl py-3.5 pl-12 pr-4 text-white focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all"
+                        className="w-full bg-foreground/5 border border-foreground/10 rounded-xl py-3.5 pl-12 pr-4 text-foreground focus:outline-none focus:border-foreground/30 focus:bg-foreground/10 transition-all placeholder:text-foreground/20"
                       />
                     </div>
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono uppercase tracking-widest text-white/40 ml-1">Message</label>
+                  <label className="text-xs font-mono uppercase tracking-widest text-foreground/40 ml-1">Message</label>
                   <div className="relative">
-                    <MessageSquare className="absolute left-4 top-4 text-white/20" size={18} />
+                    <MessageSquare className="absolute left-4 top-4 text-foreground/20" size={18} />
                     <textarea 
                       name="message" 
                       required
                       rows={5}
                       placeholder="Your message goes here..."
-                      className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all resize-none"
+                      className="w-full bg-foreground/5 border border-foreground/10 rounded-xl py-4 pl-12 pr-4 text-foreground focus:outline-none focus:border-foreground/30 focus:bg-foreground/10 transition-all resize-none placeholder:text-foreground/20"
                     ></textarea>
                   </div>
                 </div>
@@ -163,10 +163,10 @@ export default function Contact() {
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="w-full group relative flex items-center justify-center gap-2 bg-white hover:bg-[#e0e0e0] text-black font-bold py-4 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden"
+                  className="w-full group relative flex items-center justify-center gap-2 bg-foreground text-background font-bold py-4 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden"
                 >
                   {isSubmitting ? (
-                    <div className="w-6 h-6 border-2 border-black/20 border-t-black rounded-full animate-spin"></div>
+                    <div className="w-6 h-6 border-2 border-background/20 border-t-background rounded-full animate-spin"></div>
                   ) : (
                     <>
                       <span>Send Message</span>

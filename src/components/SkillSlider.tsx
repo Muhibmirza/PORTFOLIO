@@ -61,17 +61,17 @@ const itSkills: Skill[] = [
 
 export default function SkillSlider() {
   return (
-    <div className="py-20 bg-[#121212] overflow-hidden">
+    <div className="py-20 bg-background overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 mb-12">
-        <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tighter uppercase mb-2">
-          Expertise <span className="text-white/40">In Motion</span>
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tighter uppercase mb-2">
+          Expertise <span className="text-foreground/40">In Motion</span>
         </h2>
-        <div className="w-16 h-1 bg-white mb-10" />
+        <div className="w-16 h-1 bg-foreground mb-10" />
       </div>
 
       {/* Development Slider */}
       <div className="mb-12">
-        <p className="max-w-7xl mx-auto px-6 text-white/30 text-xs font-mono uppercase tracking-[0.3em] mb-6">
+        <p className="max-w-7xl mx-auto px-6 text-foreground/30 text-xs font-mono uppercase tracking-[0.3em] mb-6">
           Development & Engineering
         </p>
         <InfiniteRow skills={devSkills} direction="left" speed={40} />
@@ -79,7 +79,7 @@ export default function SkillSlider() {
 
       {/* IT Slider */}
       <div>
-        <p className="max-w-7xl mx-auto px-6 text-white/30 text-xs font-mono uppercase tracking-[0.3em] mb-6">
+        <p className="max-w-7xl mx-auto px-6 text-foreground/30 text-xs font-mono uppercase tracking-[0.3em] mb-6">
           IT Infrastructure & Security
         </p>
         <InfiniteRow skills={itSkills} direction="right" speed={50} />
@@ -107,12 +107,12 @@ function InfiniteRow({ skills, direction, speed }: { skills: Skill[], direction:
         {duplicatedSkills.map((skill, idx) => (
           <div
             key={idx}
-            className="flex items-center gap-4 bg-white/5 border border-white/10 px-8 py-5 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 group/item"
+            className="flex items-center gap-4 bg-foreground/5 border border-foreground/10 px-8 py-5 rounded-2xl hover:bg-foreground/10 hover:border-foreground/20 transition-all duration-300 group/item"
           >
             <div className="flex items-center justify-center min-w-[32px] min-h-[32px]">
               {skill.icon}
             </div>
-            <span className="text-white font-medium tracking-tight text-lg">
+            <span className="text-foreground font-medium tracking-tight text-lg">
               {skill.name}
             </span>
           </div>
